@@ -6,22 +6,28 @@ Tool to parse arithmetic expressions and perform operations with exception check
 
 Expression "5 + x" would have the following representation:
 
+```
 GeneralExpression x = new Add(new Const(5), new Variable("x"));
+```
 
 To calculate the value for a specific set of variables you use the evaluate function:
 
+```
 int result = x.evaluate(1)
+```
 
 In this case the resulting value would be equal to 6.
 
 
-You can also parse expressions directly from string using the 
-ExpressionParser
- class:
+You can also parse expressions directly from string using the ```ExpressionParser``` class:
 
+```
 ExpressionParser parser = new ExpressionParser();
 GeneralExpression result = parser.parse("  (4 + x) * 8 ");
+```
 
 In this case the parsed expression would look as following:
 
+```
 new Multiply(new Add(new Const(4), new Variable("x")), new Const(8));
+```
