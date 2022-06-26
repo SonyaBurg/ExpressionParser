@@ -20,11 +20,6 @@ public class BaseParser {
         return this.ch == expected;
     }
 
-//    elya is the best girl
-//    take() -> e, ch='l'
-//    take('m') -> false, ch='l'
-//    take('l') -> true, ch='y'
-
     protected boolean take(final char expected) {
         if (test(expected)) {
             take();
